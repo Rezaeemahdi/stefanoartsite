@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canton dell'Arte — Stefano Nicoletti Atelier</title>
+  <link rel="stylesheet" href="stefano.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-text">Canton dell'Arte</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">
+      <span class="logo-main">Canton</span>
+      <span class="logo-sub">dell'Arte</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#atelier" class="nav-link">Atelier</a></li>
+      <li><a href="#chi-sono" class="nav-link">Chi Sono</a></li>
+      <li><a href="#arte" class="nav-link">Arte</a></li>
+      <li><a href="#decoro" class="nav-link">Decoro</a></li>
+      <li><a href="#contatto" class="nav-link nav-cta">Contatto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-grain"></div>
+      <div class="hero-gradient"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-up">Stefano Nicoletti</p>
+      <h1 class="hero-title reveal-up">
+        <em>Canton</em><br/>
+        <span>dell'Arte</span>
+      </h1>
+      <p class="hero-subtitle reveal-up">
+        Atelier · Pittura · Decoro
+      </p>
+      <div class="hero-divider reveal-up"></div>
+      <p class="hero-desc reveal-up">
+        Un luogo dove l'arte incontra l'autenticità.<br/>
+        Pittura, scultura e decoro come linguaggio dell'anima.
+      </p>
+      <a href="#atelier" class="btn-primary reveal-up">Scopri l'Atelier</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scorri</span>
+      <div class="scroll-line"></div>
+    </div>
+    <!-- Decorative large number -->
+    <div class="hero-deco-num">I</div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Pittura</span><span>·</span>
+      <span>Scultura</span><span>·</span>
+      <span>Decoro</span><span>·</span>
+      <span>Atelier</span><span>·</span>
+      <span>Arte</span><span>·</span>
+      <span>Creatività</span><span>·</span>
+      <span>Pittura</span><span>·</span>
+      <span>Scultura</span><span>·</span>
+      <span>Decoro</span><span>·</span>
+      <span>Atelier</span><span>·</span>
+      <span>Arte</span><span>·</span>
+      <span>Creatività</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ATELIER SECTION -->
+  <section class="section atelier-section" id="atelier">
+    <div class="section-label">01 — Atelier</div>
+    <div class="atelier-grid">
+      <div class="atelier-text">
+        <h2 class="section-title reveal-up">Lo <em>Spazio</em><br/>della Creatività</h2>
+        <p class="body-text reveal-up">
+          L'atelier è un luogo vivo, caldo, pieno di colori e odori di pittura. 
+          Un cantone — un angolo — dove l'arte prende forma ogni giorno, tra pennelli, tele e persone.
+        </p>
+        <p class="body-text reveal-up">
+          Uno spazio aperto a tutti, dove la bravura non è richiesta: 
+          solo la voglia di esprimersi e di stare insieme.
+        </p>
+        <a href="#arte" class="btn-secondary reveal-up">Esplora le opere</a>
+      </div>
+      <div class="atelier-images reveal-right">
+        <div class="img-card img-card--tall">
+          <div class="img-placeholder img-placeholder--1">
+            <div class="img-overlay">
+              <span>Atelier</span>
+            </div>
+          </div>
+        </div>
+        <div class="img-card img-card--short">
+          <div class="img-placeholder img-placeholder--2">
+            <div class="img-overlay">
+              <span>Tela Totale</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TELA TOTALE / PITTURA -->
+  <section class="section pittura-section" id="arte">
+    <div class="section-label">02 — Arte</div>
+    <div class="pittura-hero">
+      <div class="pittura-bg-card">
+        <div class="img-placeholder img-placeholder--3"></div>
+        <div class="pittura-overlay"></div>
+      </div>
+      <div class="pittura-content">
+        <h2 class="pittura-title reveal-up"><em>Tela</em><br/>Totale</h2>
+        <p class="pittura-tag">Pittura · Anti-bravura</p>
+        <p class="pittura-desc reveal-up">
+          Il gioco della pittura senza tema né patema.<br/>
+          Un modo di stare insieme agli altri ed essere<br/>
+          autenticamente sé stessi.
+        </p>
+        <a href="https://cantondellarte.it/tela-totale/" target="_blank" class="btn-primary reveal-up">Scopri il gioco</a>
+      </div>
+    </div>
+
+    <!-- Gallery grid -->
+    <div class="gallery-grid">
+      <div class="gallery-item gallery-item--1 reveal-up">
+        <div class="img-placeholder img-placeholder--4"></div>
+        <div class="gallery-label">Pittura</div>
+      </div>
+      <div class="gallery-item gallery-item--2 reveal-up" style="animation-delay:0.1s">
+        <div class="img-placeholder img-placeholder--5"></div>
+        <div class="gallery-label">Scultura</div>
+      </div>
+      <div class="gallery-item gallery-item--3 reveal-up" style="animation-delay:0.2s">
+        <div class="img-placeholder img-placeholder--6"></div>
+        <div class="gallery-label">Atelier</div>
+      </div>
+      <div class="gallery-item gallery-item--4 reveal-up" style="animation-delay:0.3s">
+        <div class="img-placeholder img-placeholder--7"></div>
+        <div class="gallery-label">Decoro</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHI SONO -->
+  <section class="section chi-sono-section" id="chi-sono">
+    <div class="section-label">03 — Chi Sono</div>
+    <div class="chisono-inner">
+      <div class="chisono-portrait reveal-left">
+        <div class="portrait-frame">
+          <div class="img-placeholder img-placeholder--8"></div>
+          <div class="portrait-border"></div>
+        </div>
+      </div>
+      <div class="chisono-text">
+        <h2 class="section-title reveal-up">Stefano<br/><em>Nicoletti</em></h2>
+        <p class="body-text reveal-up">
+          Artista, decoratore, conduttore di esperienze creative. 
+          Vivo e lavoro tra colori, forme e persone che vogliono scoprire 
+          il piacere autentico della pittura.
+        </p>
+        <p class="body-text reveal-up">
+          Il mio lavoro nasce dall'idea che l'arte non sia un privilegio dei "bravi": 
+          è un linguaggio universale, capace di connettere e liberare.
+        </p>
+        <div class="stats-row reveal-up">
+          <div class="stat">
+            <span class="stat-num">+15</span>
+            <span class="stat-label">Anni di atelier</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Tele create</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100+</span>
+            <span class="stat-label">Partecipanti</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DECORO -->
+  <section class="section decoro-section" id="decoro">
+    <div class="section-label">04 — Decoro</div>
+    <div class="decoro-header">
+      <h2 class="section-title reveal-up">Arte<br/><em>Decorativa</em></h2>
+      <p class="body-text reveal-up">
+        Il decoro come pratica quotidiana. Oggetti, superfici e spazi 
+        trasformati dalla mano e dall'occhio dell'artista.
+      </p>
+    </div>
+    <div class="decoro-grid">
+      <div class="decoro-card reveal-up">
+        <div class="decoro-icon">✦</div>
+        <h3>Pittura su Oggetti</h3>
+        <p>Trasformare il quotidiano in arte, dare nuova vita a forme e superfici.</p>
+      </div>
+      <div class="decoro-card reveal-up" style="animation-delay:0.15s">
+        <div class="decoro-icon">◈</div>
+        <h3>Decorazione Murale</h3>
+        <p>Dipingere lo spazio come se fosse una tela: ampia, viva, narrativa.</p>
+      </div>
+      <div class="decoro-card reveal-up" style="animation-delay:0.3s">
+        <div class="decoro-icon">❋</div>
+        <h3>Workshop Creativi</h3>
+        <p>Laboratori aperti per esplorare tecniche decorative in gruppo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE / MANIFESTO -->
+  <section class="manifesto-section">
+    <div class="manifesto-inner reveal-up">
+      <span class="manifesto-quote-mark">"</span>
+      <blockquote>
+        Un modo di stare insieme agli altri<br/>
+        ed essere autenticamente sé stessi.
+      </blockquote>
+      <cite>— Stefano Nicoletti</cite>
+    </div>
+  </section>
+
+  <!-- CONTATTO -->
+  <section class="section contatto-section" id="contatto">
+    <div class="section-label">05 — Contatto</div>
+    <div class="contatto-inner">
+      <div class="contatto-text">
+        <h2 class="section-title reveal-up">Mettiamoci<br/>in <em>Contatto</em></h2>
+        <p class="body-text reveal-up">
+          Hai curiosità sull'atelier, vuoi partecipare a un workshop 
+          o commissionare un'opera? Scrivimi, rispondo sempre.
+        </p>
+        <div class="contact-info reveal-up">
+          <a href="mailto:cantondellarte@gmail.com" class="contact-line">
+            <span class="contact-icon">✉</span>
+            cantondellarte@gmail.com
+          </a>
+          <a href="tel:+393407994909" class="contact-line">
+            <span class="contact-icon">✆</span>
+            +39 340 7994909
+          </a>
+        </div>
+        <div class="social-row reveal-up">
+          <a href="https://www.instagram.com/canton_dell_arte" target="_blank" class="social-link">Instagram</a>
+          <span>·</span>
+          <a href="https://www.youtube.com/@Cantondellarte" target="_blank" class="social-link">YouTube</a>
+          <span>·</span>
+          <a href="https://vimeo.com/cantondellarte" target="_blank" class="social-link">Vimeo</a>
+        </div>
+      </div>
+      <form class="contact-form reveal-right" id="contactForm">
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" placeholder="Il tuo nome" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="La tua email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Messaggio</label>
+          <textarea id="message" name="message" rows="5" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Invia Messaggio</button>
+        <div class="form-feedback" id="formFeedback"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-main">Canton</span>
+        <span class="logo-sub">dell'Arte</span>
+      </div>
+      <p class="footer-copy">© Stefano Nicoletti — Canton dell'Arte. Tutti i diritti riservati.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#atelier">Atelier</a>
+        <a href="#arte">Arte</a>
+        <a href="#contatto">Contatto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="stefano.js"></script>
+</body>
+</html>
