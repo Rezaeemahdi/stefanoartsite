@@ -245,7 +245,8 @@ p{margin-bottom:.9em}
 
 /* Scritta images */
 .scritta-block{margin-bottom:2.5rem}
-.scritta-block img{max-width:560px}
+.scritta-block img{max-width:560px
+display : flex }
 
 /* Stripe bar */
 .stripe-bar{opacity:.25;margin-bottom:1.5rem;overflow:hidden}
@@ -753,4 +754,132 @@ p{margin-bottom:.9em}
   .pillar{max-width:260px;width:100%}
   .cv-trio{flex-direction:column;gap:.8rem}
   .cs-stats{gap:1.5rem}
+}
+
+
+
+/* ════════════════════════════════════════
+   MOBILE COMPATIBILITY PATCH (DO NOT EDIT DESIGN)
+   Add this at the VERY END of your CSS
+   ════════════════════════════════════════ */
+
+/* Fix iOS viewport height (Safari) */
+.hero-sec,
+.decoro-hero {
+  min-height: 100svh;
+}
+
+/* Prevent horizontal scroll everywhere */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Improve tap behavior on mobile */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Fix text auto-resizing on iOS */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Images & videos always scale correctly */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix grid overflow issues */
+.photo-grid,
+.pittura-strip {
+  width: 100%;
+}
+
+/* Make sure long text never breaks layout */
+p, h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Better form usability on mobile */
+input, textarea, select {
+  font-size: 16px; /* prevents zoom on iPhone */
+}
+
+/* Fix fixed elements on iOS */
+.site-nav {
+  width: 100%;
+}
+
+/* Improve scrolling smoothness */
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix lightbox scaling on small screens */
+#lbImg {
+  max-width: 95vw;
+  max-height: 75vh;
+}
+
+/* Ensure buttons are finger-friendly */
+.btn-terracotta,
+.ci-soc-btn,
+.btt {
+  min-height: 44px;
+}
+
+/* Fix flex overflow issues */
+.sec-inner,
+.two-col,
+.tt-layout,
+.chisono-grid,
+.contatto-grid {
+  min-width: 0;
+}
+
+/* Prevent animation lag on mobile */
+* {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Improve marquee performance */
+.marquee-track {
+  will-change: transform;
+}
+
+/* Fix video embeds on very small screens */
+.vimeo-box {
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* Extra small devices (iPhone SE, small Samsung) */
+@media (max-width: 380px) {
+  .hero-h1 {
+    font-size: 2.2rem;
+  }
+
+  .sec-title {
+    font-size: 1.7rem;
+  }
+
+  .pillar {
+    padding: 1rem 0.6rem;
+  }
+}
+
+/* Landscape phones fix */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-sec {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-h1 {
+    font-size: 2.5rem;
+  }
 }
