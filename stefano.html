@@ -1,315 +1,1022 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Canton dell'Arte — Stefano Nicoletti Atelier</title>
-  <link rel="stylesheet" href="stefano.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Canton dell'Arte — Stefano Nicoletti Atelier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Lato:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="stefano.css"/>
 </head>
 <body>
 
-  <!-- Custom cursor -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-dot" id="cursorDot"></div>
-
-  <!-- Loader -->
-  <div class="loader" id="loader">
-    <div class="loader-inner">
-      <span class="loader-text">Canton dell'Arte</span>
-      <div class="loader-bar"><div class="loader-fill"></div></div>
-    </div>
+<!-- ══════════════════════════════════════════
+     LOADER
+══════════════════════════════════════════ -->
+<div class="loader" id="loader">
+  <div class="loader-box">
+    <div class="loader-name">Canton dell'Arte</div>
+    <div class="loader-role">Stefano Nicoletti · Atelier</div>
+    <div class="loader-track"><div class="loader-prog"></div></div>
   </div>
+</div>
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <a href="#" class="nav-logo">
-      <span class="logo-main">Canton</span>
-      <span class="logo-sub">dell'Arte</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="nav-link">Home</a></li>
-      <li><a href="#atelier" class="nav-link">Atelier</a></li>
-      <li><a href="#chi-sono" class="nav-link">Chi Sono</a></li>
-      <li><a href="#arte" class="nav-link">Arte</a></li>
-      <li><a href="#decoro" class="nav-link">Decoro</a></li>
-      <li><a href="#contatto" class="nav-link nav-cta">Contatto</a></li>
-    </ul>
+<!-- ══════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════ -->
+<header class="site-nav" id="siteNav">
+  <a href="#home" class="nav-logo">
+    <img src="http://cantondellarte.it/wp-content/uploads/2025/07/scritta-canton-arte-orizzontale.png"
+         alt="Canton dell'Arte" class="nav-logo-img"
+         onerror="this.style.display='none';this.nextSibling.style.display='block'"/>
+    <span class="nav-logo-fallback">Canton dell'Arte</span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#home"       class="nl">Home</a>
+    <a href="#atelier"    class="nl">Atelier</a>
+    <a href="#chi-sono"   class="nl">Chi Sono</a>
+    <a href="#arte"       class="nl">Arte</a>
+    <a href="#decoro"     class="nl">Decoro</a>
+    <a href="#tela-totale" class="nl">Tela Totale</a>
+    <a href="#contatto"   class="nl nl-cta">Contatto</a>
   </nav>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <div class="hero-grain"></div>
-      <div class="hero-gradient"></div>
-    </div>
-    <div class="hero-content">
-      <p class="hero-eyebrow reveal-up">Stefano Nicoletti</p>
-      <h1 class="hero-title reveal-up">
-        <em>Canton</em><br/>
-        <span>dell'Arte</span>
-      </h1>
-      <p class="hero-subtitle reveal-up">
-        Atelier · Pittura · Decoro
-      </p>
-      <div class="hero-divider reveal-up"></div>
-      <p class="hero-desc reveal-up">
-        Un luogo dove l'arte incontra l'autenticità.<br/>
-        Pittura, scultura e decoro come linguaggio dell'anima.
-      </p>
-      <a href="#atelier" class="btn-primary reveal-up">Scopri l'Atelier</a>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Scorri</span>
-      <div class="scroll-line"></div>
-    </div>
-    <!-- Decorative large number -->
-    <div class="hero-deco-num">I</div>
-  </section>
+<!-- ══════════════════════════════════════════
+     HOME — Hero
+     Mirrors: homepage with "atelier" tag, headline,
+     scritta image, calligraphy stripe, and 3 pillar links
+══════════════════════════════════════════ -->
+<section id="home" class="sec hero-sec">
 
-  <!-- MARQUEE -->
-  <div class="marquee-wrap">
-    <div class="marquee-track">
-      <span>Pittura</span><span>·</span>
-      <span>Scultura</span><span>·</span>
-      <span>Decoro</span><span>·</span>
-      <span>Atelier</span><span>·</span>
-      <span>Arte</span><span>·</span>
-      <span>Creatività</span><span>·</span>
-      <span>Pittura</span><span>·</span>
-      <span>Scultura</span><span>·</span>
-      <span>Decoro</span><span>·</span>
-      <span>Atelier</span><span>·</span>
-      <span>Arte</span><span>·</span>
-      <span>Creatività</span><span>·</span>
+  <!-- Calligraphy decorative stripe (calligraphy_54.png 2560×265) -->
+  <div class="hero-stripe" aria-hidden="true">
+    <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_54.png" alt=""/>
+  </div>
+
+  <div class="hero-inner">
+    <p class="hero-tag">atelier</p>
+
+    <h1 class="hero-h1">
+      stefano nicoletti<br/>
+      <em>atelier</em>
+    </h1>
+
+    <!-- Handwritten site title (scritta-canton-dellarte.png) -->
+    <div class="hero-scritta reveal">
+      <img src="http://cantondellarte.it/wp-content/uploads/2025/06/scritta-canton-dellarte.png"
+           alt="scritta canton dell'arte"/>
+    </div>
+
+    <!-- Three pillars — exactly as the original homepage tabs -->
+    <div class="hero-pillars reveal">
+      <a href="#atelier" class="pillar">
+        <span class="p-sm">atelier</span>
+        <span class="p-lg">ATELIER</span>
+      </a>
+      <a href="#arte" class="pillar">
+        <span class="p-sm">arte</span>
+        <span class="p-lg">ARTE</span>
+      </a>
+      <a href="#decoro" class="pillar">
+        <span class="p-sm">decoro</span>
+        <span class="p-lg">DECORO</span>
+      </a>
+    </div>
+
+    <a href="#atelier" class="scroll-hint">
+      <span>Scopri</span>
+      <span class="sh-arrow"></span>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     MARQUEE BAND
+══════════════════════════════════════════ -->
+<div class="marquee-wrap">
+  <div class="marquee-track" aria-hidden="true">
+    <span>Pittura</span><b>·</b><span>Scultura</span><b>·</b>
+    <span>Decoro</span><b>·</b><span>Atelier</span><b>·</b>
+    <span>Artigianato</span><b>·</b><span>Arte</span><b>·</b>
+    <span>Creatività</span><b>·</b><span>Padova</span><b>·</b>
+    <span>Pittura</span><b>·</b><span>Scultura</span><b>·</b>
+    <span>Decoro</span><b>·</b><span>Atelier</span><b>·</b>
+    <span>Artigianato</span><b>·</b><span>Arte</span><b>·</b>
+    <span>Creatività</span><b>·</b><span>Padova</span><b>·</b>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     ATELIER
+     Source: cantondellarte.it/atelier/
+     Contains: scritta, stripe, text, CAD logo, full photo history gallery
+══════════════════════════════════════════ -->
+<section id="atelier" class="sec atelier-sec">
+  <div class="sec-inner">
+
+    <div class="sec-eyebrow">01 — Atelier</div>
+
+    <!-- scritta-Atelier.png title image -->
+    <div class="scritta-block reveal">
+      <img src="http://cantondellarte.it/wp-content/uploads/2025/07/scritta-Atelier.png"
+           alt="scritta Atelier"/>
+    </div>
+
+    <!-- Decorative calligraphy stripe -->
+    <div class="stripe-bar reveal" aria-hidden="true">
+      <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_54.png" alt=""/>
+    </div>
+
+    <!-- Cover image of the atelier space (calligraphy_55.png COVER SPAZIO_1, 1080×557) -->
+    <div class="atelier-cover reveal">
+      <img src="Hero.png"
+           alt="COVER SPAZIO_1 — Lo spazio dell'Atelier" width="1080" height="557"/>
+      <!-- Decorative letter A overlay (scritta-lettera-A.png, 940×651) -->
+      <img src="http://cantondellarte.it/wp-content/uploads/2025/06/scritta-lettera-A.png"
+           alt="scritta lettera A" class="letter-overlay" width="940" height="651"/>
+    </div>
+
+    <!-- Text block: Ambiente polifunzionale -->
+    <div class="two-col reveal">
+      <div class="col-body">
+        <div class="cad-row">
+          <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png"
+               alt="CAD" class="cad-mark"/>
+        </div>
+        <h2 class="sec-title">Atelier</h2>
+        <h3 class="sec-sub">Ambiente polifunzionale</h3>
+        <p>Canton dell'Arte nasce nel 2009 per un felice connubio tra bioedilizia e artigianato artistico.</p>
+        <p>In questi anni gli assetti dello spazio sono variati più volte ma il fulcro attorno a cui tutto si è mosso è sempre stata la relazione umana. Il trovarsi per far cose ha così avuto il senso di trovarsi per imparare a fare… per imparare a essere!</p>
+        <a href="#tela-totale" class="btn-terracotta">Scopri Tela Totale</a>
+      </div>
+      <div class="col-aside">
+        <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png"
+             alt="CAD monogramma Canton dell'Arte" class="cad-big"/>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="section-divider reveal">
+      <span class="div-line"></span>
+      <span class="div-title">Lo spazio · La storia</span>
+      <span class="div-line"></span>
+    </div>
+
+    <!-- Full photo history gallery — all images from /atelier/ -->
+    <div class="photo-grid reveal" data-lb="atelier">
+
+      <figure class="pg-item pg-wide" data-caption="In attesa dei primi ordini si pratica pittura e confù del calicanto">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/02-in-attesa-dei-primi-ordini-si-pratica-pittura-e-confu-del-calicanto.jpg"
+             alt="In attesa dei primi ordini si pratica pittura e confù del calicanto" loading="lazy"/>
+        <figcaption>In attesa dei primi ordini</figcaption>
+      </figure>
+
+      <figure class="pg-item pg-tall" data-caption="Intanto continuano anche le performance">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/04-intanto-continuano-anche-le-performance.jpg"
+             alt="Continuano le performance" loading="lazy"/>
+        <figcaption>Le Performance</figcaption>
+      </figure>
+
+      <figure class="pg-item" data-caption="Prime commesse">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/03-prime-commesse.jpg"
+             alt="Prime commesse" loading="lazy"/>
+        <figcaption>Prime Commesse</figcaption>
+      </figure>
+
+      <figure class="pg-item" data-caption="Nasce un gruppo per inventare la casa di quartiere">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/05-nasce-un-gruppo-per-inventare-la-casa-di-quartiere-un-vecchio-edificio-che-il-Comune-ha-acquistato-con-lintenzione-di-riqualificare-e-dedicarlo-a-servizi-per-la-cittadinanza.jpg"
+             alt="Nasce un gruppo per inventare la casa di quartiere" loading="lazy"/>
+        <figcaption>Gruppo di Quartiere</figcaption>
+      </figure>
+
+      <figure class="pg-item" data-caption="Ecco il gruppo dei progettisti">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/06-Ecco-il-gruppo-dei-progettisti.jpg"
+             alt="Ecco il gruppo dei progettisti" loading="lazy"/>
+        <figcaption>I Progettisti</figcaption>
+      </figure>
+
+      <figure class="pg-item pg-tall" data-caption="Alla consolle">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/08-alla-consolle.jpg"
+             alt="Alla consolle" loading="lazy"/>
+        <figcaption>Alla Consolle</figcaption>
+      </figure>
+
+      <figure class="pg-item pg-tall" data-caption="Ed ecco il gruppo dei super progettisti">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/07-ed-ecco-il-gruppo-dei-super-progettisti.jpg"
+             alt="Ed ecco il gruppo dei super progettisti" loading="lazy"/>
+        <figcaption>Super Progettisti</figcaption>
+      </figure>
+
+      <figure class="pg-item pg-wide" data-caption="Contame che te conto">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/10-contame-che-te-conto_.jpg"
+             alt="Contame che te conto" loading="lazy"/>
+        <figcaption>Contame che te conto</figcaption>
+      </figure>
+
+      <figure class="pg-item pg-tall" data-caption="Unplugged">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/09-unplugged.jpg"
+             alt="Unplugged" loading="lazy"/>
+        <figcaption>Unplugged</figcaption>
+      </figure>
+
+      <figure class="pg-item" data-caption="La Jole">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/13-la-Jole.jpg"
+             alt="La Jole" loading="lazy"/>
+        <figcaption>La Jole</figcaption>
+      </figure>
+
+      <figure class="pg-item" data-caption="Rondaaaaa">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/11-Rondaaaaa.jpg"
+             alt="Ronda" loading="lazy"/>
+        <figcaption>Ronda</figcaption>
+      </figure>
+
+      <figure class="pg-item" data-caption="Le Arcane">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/12-leArcane.jpg"
+             alt="Le Arcane" loading="lazy"/>
+        <figcaption>Le Arcane</figcaption>
+      </figure>
+
+      <figure class="pg-item pg-tall" data-caption="Una capanna">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/14-una-capanna.jpg"
+             alt="Una capanna" loading="lazy"/>
+        <figcaption>Una Capanna</figcaption>
+      </figure>
+
+      <figure class="pg-item pg-tall" data-caption="Relax per le tigri dell'Arcella">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/16-relax-per-le-tigri-dellArcella.jpg"
+             alt="Relax per le tigri dell'Arcella" loading="lazy"/>
+        <figcaption>Relax</figcaption>
+      </figure>
+
+      <figure class="pg-item" data-caption="E…">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/19-e….jpg"
+             alt="E…" loading="lazy"/>
+        <figcaption>E…</figcaption>
+      </figure>
+
+      <figure class="pg-item pg-tall" data-caption="Pane al pane vino al vino">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/05/15-pane-al-pane-vino-al-vino.jpg"
+             alt="Pane al pane vino al vino" loading="lazy"/>
+        <figcaption>Pane al Pane</figcaption>
+      </figure>
+
+      <figure class="pg-item pg-tall" data-caption="E poi ancora arte">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/18-e-poi-ancora-arte.jpg"
+             alt="E poi ancora arte" loading="lazy"/>
+        <figcaption>E poi ancora arte</figcaption>
+      </figure>
+
+    </div><!-- /photo-grid atelier -->
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CHI SONO
+     Source: cantondellarte.it/chi-sono/
+     Contains: CAD mark, name, role, social links,
+     calligraphy_74 portrait, full bio text
+══════════════════════════════════════════ -->
+<section id="chi-sono" class="sec chisono-sec">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">02 — Chi Sono</div>
+
+    <div class="chisono-grid">
+
+      <!-- Portrait image (calligraphy_74.png, 800×1057 — used as cover on /chi-sono/) -->
+      <div class="cs-portrait reveal">
+        <div class="cs-portrait-inner">
+          <img src="Stefano.png"
+               alt="stefano cover image" width="800" height="1057"/>
+          <!-- CAD mark bottom right -->
+          <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png"
+               alt="CAD" class="cs-cad-badge"/>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="cs-text reveal">
+        <div class="cad-row">
+          <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png"
+               alt="CAD" class="cad-mark"/>
+          <span class="cad-label">Su di me</span>
+        </div>
+        <h2 class="sec-title">Stefano Nicoletti</h2>
+        <p class="cs-role">Artigiano e Artista</p>
+        <div class="cs-socials">
+          <a href="https://vimeo.com/cantondellarte" target="_blank" rel="noopener" class="cs-soc">Segui su Vimeo</a>
+          <a href="https://www.instagram.com/canton_dell_arte" target="_blank" rel="noopener" class="cs-soc">Segui su Instagram</a>
+        </div>
+
+        <div class="cs-bio">
+          <p>Sono un artigiano di Padova, nato in quel periodo in cui si diceva che l'immaginazione sarebbe andata al potere.</p>
+          <p>Attratto dalle possibilità dell'immaginazione ho fatto dell'artigianalità lo strumento per indagare e sperimentare il mondo sensoriale sempre con curiosità e un pizzico di poesia.<br/>Così i materiali, gli attrezzi, le situazioni mi hanno educato e formato.</p>
+          <p>Un cenno immancabile, che è sincero ringraziamento va ai miei genitori, ai miei maestri, a mia moglie e soprattutto ai miei figli che puntualmente, passo dopo passo, mi hanno mostrato a specchio la mia vera anima.</p>
+        </div>
+
+        <div class="cs-stats">
+          <div class="cs-stat">
+            <span class="cs-n" data-to="15" data-suf="+">15+</span>
+            <span class="cs-l">anni di atelier</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-n">2009</span>
+            <span class="cs-l">fondazione</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-n">∞</span>
+            <span class="cs-l">tele create</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAD footer mark -->
+    <div class="cad-footer reveal" aria-hidden="true">
+      <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png" alt="cad"/>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     QUOTE STRIP
+══════════════════════════════════════════ -->
+<div class="quote-strip reveal">
+  <blockquote>
+    &ldquo;Un modo di stare insieme agli altri ed essere autenticamente sé stessi.&rdquo;
+  </blockquote>
+  <cite>— Stefano Nicoletti</cite>
+</div>
+
+<!-- ══════════════════════════════════════════
+     ARTE
+     Source: cantondellarte.it/arte/
+     Contains: CAD, scritta-arte.png, poem text,
+     23 artwork photos, Corpo Vela philosophy text
+══════════════════════════════════════════ -->
+<section id="arte" class="sec arte-sec">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">03 — Arte</div>
+
+    <div class="cad-row reveal">
+      <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png"
+           alt="CAD" class="cad-mark"/>
+      <span class="cad-label">Arte</span>
+    </div>
+
+    <!-- scritta-arte.png (1200×442) -->
+    <div class="scritta-block reveal">
+      <img src="http://cantondellarte.it/wp-content/uploads/2025/07/scritta-arte.png"
+           alt="scritta arte" width="1200" height="442"/>
+    </div>
+
+    <!-- Exactly as on the /arte/ page: scattered muse words + prose -->
+    <div class="arte-poem reveal">
+      <p class="poem-q">Che vuol dire?</p>
+      <div class="poem-words">
+        <span class="pw pw-a">Poesia</span>
+        <span class="pw pw-b">Danza</span>
+        <span class="pw pw-c">Canto</span>
+        <span class="pw pw-d">Musica</span>
+        <span class="pw pw-e">Pittura</span>
+        <span class="pw pw-f">Scultura</span>
+        <span class="pw pw-g">Racconto</span>
+        <span class="pw pw-h">Scrittura</span>
+        <span class="pw pw-i">……</span>
+      </div>
+      <div class="poem-prose">
+        <p>Sono alcune delle Muse che</p>
+        <p>nella nostra tradizione con corpi magici di donna</p>
+        <p>incarnano le possibilità espressive</p>
+        <p>con cui ancora oggi amiamo chiamare le Arti.</p>
+      </div>
+    </div>
+
+    <!-- Full arte gallery — all 22 photos from /arte/ page -->
+    <div class="photo-grid reveal" data-lb="arte">
+
+      <figure class="pg-item pg-tall" data-caption="Arte — IMG_0371">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0371.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="Arte — IMG_0505">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0505.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="Arte — IMG_0570">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0570.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-tall" data-caption="Arte — IMG_0320">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0320.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="Arte — IMG_0556">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0556.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="Atelier 2">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/atelier-2.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-tall" data-caption="Arte — IMG_0590">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0590.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="Atelier 21">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/atelier-21.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="Atelier 9">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/atelier-9.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="Anima e corpo — atelier 88">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/atelier-88.jpeg" alt="anima e corpo" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-tall" data-caption="Anima e corpo — atelier 89">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/atelier-89.jpeg" alt="anima e corpo" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-tall" data-caption="Atelier 10">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/atelier-10.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="Arte — IMG_0518">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0518.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-tall" data-caption="Arte — IMG_0569">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0569.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-tall" data-caption="Arte — IMG_0379">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0379.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="Arte — IMG_0591">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0591.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="Arte — IMG_0735">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0735.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="Atelier 7">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/atelier-7.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-tall" data-caption="Anima e corpo — atelier 90">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/atelier-90.jpeg" alt="anima e corpo" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="Atelier 3">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/atelier-3.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="Arte — IMG_0740">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0740.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+      <figure class="pg-item pg-tall" data-caption="Arte — IMG_0577">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0577.jpeg" alt="arte" loading="lazy"/>
+      </figure>
+
+    </div><!-- /photo-grid arte -->
+
+    <!-- Corpo Vela philosophy text — exactly from /arte/ page -->
+    <div class="corpo-vela reveal">
+      <div class="cad-row">
+        <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png" alt="CAD" class="cad-mark"/>
+        <span class="cad-label">L'Atelier — Corpo Vela</span>
+      </div>
+      <div class="cv-body">
+        <p>La poetica del Corpo Vela si colloca nella dinamica contemporanea delle tecniche come una proposta di indagine estetica sul modello da cui si trae ispirazione per realizzare l'"ARTIFICIALE"</p>
+        <p>qual è questo modello se non la Natura e, in Lei… noi stessi!</p>
+        <div class="cv-trio">
+          <span>Immagine</span><span>Suono</span><span>Movimento</span>
+        </div>
+        <p>inondano il mondo sensoriale<br/>stimolano l'alchimia delle emozioni<br/>giocano con lo spirito<br/>e si manifesta il senso stesso dell'Essere</p>
+        <p>Arte in greco antico fu una parola che oggi riverbera ancora nel nostro vocabolario nella forma di "Tecnica"….<br/>ecco un nuovo indizio:<br/>Arte così significa saper come si fanno le cose!<br/>Come ci rapportiamo col mondo…<br/>come comunichiamo!</p>
+        <p>E non è forse l'Arte delle relazioni la più complessa e raffinata?<br/>La Relazione, Oggetto assolutamente intangibile, ma reale, che è Soggetto esso stesso<br/>e che suggerisce il senso del divino.</p>
+        <p>Mi chiedo: posso isolarmi anche solo per un attimo dal mondo?<br/>Posso separare un solo battito del cuore da tutti i battiti di una vita?<br/>Un solo respiro?<br/>Un solo pensiero?<br/>Arte diviene nome di sostanza viva e, pane al pane, l'Arte più utile è sempre stata quella di saper comporre una domanda utile al momento giusto!</p>
+      </div>
+      <div class="cad-row mt-sm" aria-hidden="true">
+        <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png" alt="cad" class="cad-mark"/>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     DECORO
+     Source: cantondellarte.it/decoro/
+     Contains: background video, scritta, full text,
+     materials list, techniques poem, 14 photos,
+     Vimeo embed for "Manifattura di un elemento decorativo"
+══════════════════════════════════════════ -->
+<section id="decoro" class="sec decoro-sec">
+
+  <!-- Background video hero (exactly as on /decoro/ page) -->
+  <div class="decoro-hero">
+    <video class="decoro-vid" autoplay muted loop playsinline>
+      <source src="http://cantondellarte.it/wp-content/uploads/2025/07/fondo-no-scritte_per-sito.mp4" type="video/mp4"/>
+    </video>
+    <div class="decoro-hero-overlay"></div>
+    <div class="decoro-hero-content">
+      <div class="sec-eyebrow light">04 — Decoro</div>
+      <!-- scritta-decoro.png (1200×326) -->
+      <img src="http://cantondellarte.it/wp-content/uploads/2025/07/scritta-decoro.png"
+           alt="scritta decoro" class="decoro-scritta" width="1200" height="326"/>
+      <h2 class="decoro-hero-title">Il Decoro</h2>
     </div>
   </div>
 
-  <!-- ATELIER SECTION -->
-  <section class="section atelier-section" id="atelier">
-    <div class="section-label">01 — Atelier</div>
-    <div class="atelier-grid">
-      <div class="atelier-text">
-        <h2 class="section-title reveal-up">Lo <em>Spazio</em><br/>della Creatività</h2>
-        <p class="body-text reveal-up">
-          L'atelier è un luogo vivo, caldo, pieno di colori e odori di pittura. 
-          Un cantone — un angolo — dove l'arte prende forma ogni giorno, tra pennelli, tele e persone.
-        </p>
-        <p class="body-text reveal-up">
-          Uno spazio aperto a tutti, dove la bravura non è richiesta: 
-          solo la voglia di esprimersi e di stare insieme.
-        </p>
-        <a href="#arte" class="btn-secondary reveal-up">Esplora le opere</a>
-      </div>
-      <div class="atelier-images reveal-right">
-        <div class="img-card img-card--tall">
-          <div class="img-placeholder img-placeholder--1">
-            <div class="img-overlay">
-              <span>Atelier</span>
-            </div>
-          </div>
-        </div>
-        <div class="img-card img-card--short">
-          <div class="img-placeholder img-placeholder--2">
-            <div class="img-overlay">
-              <span>Tela Totale</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="sec-inner">
 
-  <!-- TELA TOTALE / PITTURA -->
-  <section class="section pittura-section" id="arte">
-    <div class="section-label">02 — Arte</div>
-    <div class="pittura-hero">
-      <div class="pittura-bg-card">
-        <div class="img-placeholder img-placeholder--3"></div>
-        <div class="pittura-overlay"></div>
-      </div>
-      <div class="pittura-content">
-        <h2 class="pittura-title reveal-up"><em>Tela</em><br/>Totale</h2>
-        <p class="pittura-tag">Pittura · Anti-bravura</p>
-        <p class="pittura-desc reveal-up">
-          Il gioco della pittura senza tema né patema.<br/>
-          Un modo di stare insieme agli altri ed essere<br/>
-          autenticamente sé stessi.
-        </p>
-        <a href="https://cantondellarte.it/tela-totale/" target="_blank" class="btn-primary reveal-up">Scopri il gioco</a>
-      </div>
+    <!-- CAD + title -->
+    <div class="cad-row reveal">
+      <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png"
+           alt="CAD" class="cad-mark"/>
+      <span class="cad-label">Il Decoro</span>
     </div>
 
-    <!-- Gallery grid -->
-    <div class="gallery-grid">
-      <div class="gallery-item gallery-item--1 reveal-up">
-        <div class="img-placeholder img-placeholder--4"></div>
-        <div class="gallery-label">Pittura</div>
-      </div>
-      <div class="gallery-item gallery-item--2 reveal-up" style="animation-delay:0.1s">
-        <div class="img-placeholder img-placeholder--5"></div>
-        <div class="gallery-label">Scultura</div>
-      </div>
-      <div class="gallery-item gallery-item--3 reveal-up" style="animation-delay:0.2s">
-        <div class="img-placeholder img-placeholder--6"></div>
-        <div class="gallery-label">Atelier</div>
-      </div>
-      <div class="gallery-item gallery-item--4 reveal-up" style="animation-delay:0.3s">
-        <div class="img-placeholder img-placeholder--7"></div>
-        <div class="gallery-label">Decoro</div>
-      </div>
-    </div>
-  </section>
+    <!-- Full decoro text — exactly as original page -->
+    <div class="decoro-text reveal">
+      <p>Cos'è la decorazione? La decorazione è proprio la via del decoro! La dignità che nell'aspetto, nei modi, nell'agire è conveniente alla condizione sociale di una persona o di una categoria.</p>
 
-  <!-- CHI SONO -->
-  <section class="section chi-sono-section" id="chi-sono">
-    <div class="section-label">03 — Chi Sono</div>
-    <div class="chisono-inner">
-      <div class="chisono-portrait reveal-left">
-        <div class="portrait-frame">
-          <div class="img-placeholder img-placeholder--8"></div>
-          <div class="portrait-border"></div>
-        </div>
-      </div>
-      <div class="chisono-text">
-        <h2 class="section-title reveal-up">Stefano<br/><em>Nicoletti</em></h2>
-        <p class="body-text reveal-up">
-          Artista, decoratore, conduttore di esperienze creative. 
-          Vivo e lavoro tra colori, forme e persone che vogliono scoprire 
-          il piacere autentico della pittura.
-        </p>
-        <p class="body-text reveal-up">
-          Il mio lavoro nasce dall'idea che l'arte non sia un privilegio dei "bravi": 
-          è un linguaggio universale, capace di connettere e liberare.
-        </p>
-        <div class="stats-row reveal-up">
-          <div class="stat">
-            <span class="stat-num">+15</span>
-            <span class="stat-label">Anni di atelier</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">∞</span>
-            <span class="stat-label">Tele create</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">100+</span>
-            <span class="stat-label">Partecipanti</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DECORO -->
-  <section class="section decoro-section" id="decoro">
-    <div class="section-label">04 — Decoro</div>
-    <div class="decoro-header">
-      <h2 class="section-title reveal-up">Arte<br/><em>Decorativa</em></h2>
-      <p class="body-text reveal-up">
-        Il decoro come pratica quotidiana. Oggetti, superfici e spazi 
-        trasformati dalla mano e dall'occhio dell'artista.
-      </p>
-    </div>
-    <div class="decoro-grid">
-      <div class="decoro-card reveal-up">
-        <div class="decoro-icon">✦</div>
-        <h3>Pittura su Oggetti</h3>
-        <p>Trasformare il quotidiano in arte, dare nuova vita a forme e superfici.</p>
-      </div>
-      <div class="decoro-card reveal-up" style="animation-delay:0.15s">
-        <div class="decoro-icon">◈</div>
-        <h3>Decorazione Murale</h3>
-        <p>Dipingere lo spazio come se fosse una tela: ampia, viva, narrativa.</p>
-      </div>
-      <div class="decoro-card reveal-up" style="animation-delay:0.3s">
-        <div class="decoro-icon">❋</div>
-        <h3>Workshop Creativi</h3>
-        <p>Laboratori aperti per esplorare tecniche decorative in gruppo.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUOTE / MANIFESTO -->
-  <section class="manifesto-section">
-    <div class="manifesto-inner reveal-up">
-      <span class="manifesto-quote-mark">"</span>
-      <blockquote>
-        Un modo di stare insieme agli altri<br/>
-        ed essere autenticamente sé stessi.
+      <blockquote class="decoro-quote">
+        &ldquo;Si debbe osservare il decoro, cioè che li movimenti sieno annunziatori dei moti de l'animo.&rdquo;
+        <cite>— Leonardo</cite>
       </blockquote>
-      <cite>— Stefano Nicoletti</cite>
-    </div>
-  </section>
 
-  <!-- CONTATTO -->
-  <section class="section contatto-section" id="contatto">
-    <div class="section-label">05 — Contatto</div>
-    <div class="contatto-inner">
-      <div class="contatto-text">
-        <h2 class="section-title reveal-up">Mettiamoci<br/>in <em>Contatto</em></h2>
-        <p class="body-text reveal-up">
-          Hai curiosità sull'atelier, vuoi partecipare a un workshop 
-          o commissionare un'opera? Scrivimi, rispondo sempre.
-        </p>
-        <div class="contact-info reveal-up">
-          <a href="mailto:cantondellarte@gmail.com" class="contact-line">
-            <span class="contact-icon">✉</span>
+      <p>Quindi una grammatica di elementi ordinati e condivisi che rende riconoscibili ruoli e funzioni di cose e persone.<br/>Questa grammatica ha una sintassi che evolve proprio come il linguaggio parlato, è così che gli esperti sanno riconoscere i periodi dai particolari distintivi che li caratterizzano. Ad esempio, i ciuffi post punk di alcuni capi di stato di questi tempi li rende riconoscibili come tali?</p>
+
+      <p>Il minimalismo contemporaneo, nella sua assenza di decorazioni rimane una forma di decoro e i posteri ci penseranno come una società austera e razionale!</p>
+
+      <p>Forma insuperata di minimalismo fu invece il rivestimento di marmo lucidato di quei puri e immensi pentaedri che sono state e sono le piramidi egizie, evocanti in un modo terribile e affascinante la trascendenza nella regalità.</p>
+    </div>
+
+    <!-- Materials list (exactly as original) -->
+    <div class="materials-box reveal">
+      <h4>I materiali di sempre:</h4>
+      <div class="materials-list">
+        <span>la <strong>calce</strong></span>
+        <span>l'<strong>argilla</strong></span>
+        <span>il <strong>gesso</strong></span>
+        <span>le <strong>graniglie</strong></span>
+        <span>gli <strong>ossidi</strong></span>
+        <span>le <strong>terre</strong></span>
+        <span>i <strong>legni</strong></span>
+        <span>le <strong>foglie metalliche</strong></span>
+      </div>
+      <p>Al Canton dell'Arte vengono utilizzati in purezza o ricombinati tra loro per la piacevolezza di un rapporto diretto con gli elementi naturali.</p>
+    </div>
+
+    <!-- Techniques rhyme poem (exactly as original) -->
+    <div class="techniques-poem reveal">
+      <p>Il <strong>Marmorino</strong> Veneziano, per il nobile e il villano</p>
+      <p>il <strong>Pastellone</strong>, anche fuori di regione</p>
+      <p>il <strong>Cocciopesto</strong>, vanitoso ma modesto</p>
+      <p>gli <strong>Spatolati</strong>, per i single e gli accasati</p>
+      <p>le <strong>Vernici</strong>, delle tinte che tu dici</p>
+      <p>i <strong>Colori</strong>, con la testa si va fuori!</p>
+      <p class="tp-end">per pareti e pavimenti<br/>per i tristi e i contenti</p>
+    </div>
+
+    <!-- 14 Decoro photos from /decoro/ -->
+    <div class="photo-grid reveal" data-lb="decoro">
+
+      <figure class="pg-item pg-wide" data-caption="01 Deco">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/01-Deco.jpeg" alt="01 Deco" loading="lazy"/>
+        <figcaption>01 Deco</figcaption>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="03 Deco">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/03-Deco.jpeg" alt="03 Deco" loading="lazy"/>
+        <figcaption>03 Deco</figcaption>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="05 Deco">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/05-Deco.jpeg" alt="05 Deco" loading="lazy"/>
+        <figcaption>05 Deco</figcaption>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="07 Deco">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/07-Deco.jpeg" alt="07 Deco" loading="lazy"/>
+        <figcaption>07 Deco</figcaption>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="09 Deco">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/09-Deco.jpeg" alt="09 Deco" loading="lazy"/>
+        <figcaption>09 Deco</figcaption>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="13 Deco">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/13-Deco.jpeg" alt="13 Deco" loading="lazy"/>
+        <figcaption>13 Deco</figcaption>
+      </figure>
+      <figure class="pg-item" data-caption="14 Deco">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/14-Deco.jpeg" alt="14 Deco" loading="lazy"/>
+        <figcaption>14 Deco</figcaption>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="02 Deco">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/02-Deco.jpeg" alt="02 Deco" loading="lazy"/>
+        <figcaption>02 Deco</figcaption>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="04 Deco">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/04-Deco.jpeg" alt="04 Deco" loading="lazy"/>
+        <figcaption>04 Deco</figcaption>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="06 Deco">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/06-Deco.jpeg" alt="06 Deco" loading="lazy"/>
+        <figcaption>06 Deco</figcaption>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="10 Deco">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/10-Deco.jpeg" alt="10 Deco" loading="lazy"/>
+        <figcaption>10 Deco</figcaption>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="12 Deco">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/12-Deco.jpeg" alt="12 Deco" loading="lazy"/>
+        <figcaption>12 Deco</figcaption>
+      </figure>
+      <figure class="pg-item pg-wide" data-caption="11 Deco">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/11-Deco.jpeg" alt="11 Deco" loading="lazy"/>
+        <figcaption>11 Deco</figcaption>
+      </figure>
+      <figure class="pg-item pg-full" data-caption="08 Deco — panoramica">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/06/08-Deco.jpeg" alt="08 Deco" loading="lazy"/>
+        <figcaption>08 Deco</figcaption>
+      </figure>
+
+    </div><!-- /photo-grid decoro -->
+
+    <!-- CAD + Video section heading (exactly as on /decoro/ page) -->
+    <div class="cad-row reveal">
+      <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png"
+           alt="CAD" class="cad-mark"/>
+      <span class="cad-label">video</span>
+    </div>
+    <h3 class="video-heading reveal">Manifattura di un elemento decorativo</h3>
+
+    <!-- Vimeo embed — Decoro video (from /decoro/ Vimeo channel) -->
+    <div class="vimeo-box reveal">
+      <iframe
+        src="https://player.vimeo.com/video/1094779800?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        title="Manifattura di un elemento decorativo — Canton dell'Arte"
+        loading="lazy">
+      </iframe>
+    </div>
+    <p class="vimeo-note reveal">
+      Guarda tutti i video sul canale
+      <a href="https://vimeo.com/cantondellarte" target="_blank" rel="noopener">Vimeo di Canton dell'Arte ↗</a>
+    </p>
+
+    <div class="cad-footer reveal" aria-hidden="true">
+      <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png" alt="cad"/>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TELA TOTALE
+     Source: cantondellarte.it/tela-totale/
+     Contains: "atelier" tag, scritta image, calligraphy stripe,
+     CAD, full text, calligraphy_74 image, all 9 gallery photos.
+     (Was external link — now full in-page section)
+══════════════════════════════════════════ -->
+<section id="tela-totale" class="sec tela-sec">
+  <div class="sec-inner">
+
+    <p class="tela-tag">atelier</p>
+
+    <!-- scritta-tela-totale.png -->
+    <div class="scritta-block reveal">
+      <img src="http://cantondellarte.it/wp-content/uploads/2025/07/scritta-tela-totale.png"
+           alt="scritta tela totale"/>
+    </div>
+
+    <!-- Calligraphy stripe (calligraphy_54.png, 2560×265) -->
+    <div class="stripe-bar reveal" aria-hidden="true">
+      <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_54.png" alt=""/>
+    </div>
+
+    <div class="sec-eyebrow">05 — Tela Totale</div>
+
+    <!-- Text + image layout — exactly as /tela-totale/ page -->
+    <div class="tt-layout">
+      <div class="tt-text reveal">
+        <h2 class="sec-title">Il gioco della pittura<br/><em>senza tema né patema</em></h2>
+        <div class="tt-body">
+          <p>Il gioco della pittura senza tema né patema<br/>Un modo di stare insieme agli altri ed essere autenticamente sé stessi…<br/>Una Pittura anti bravura!</p>
+          <p>Ciò che serve è trasportare il colore dalla Tavolozza Comune alla Tela Totale dopo averlo amalgamato con le proprie mani (col pennello): acqua, pigmento naturale, un po' di amido, ed ecco, siamo pronti per lasciare la nostra Traccia.</p>
+          <p>La Traccia, il Segno.<br/>Ogni segno è impronta di un momento, dell'emozione, del sentimento, del pensiero di quel momento…<br/>Il più piccolo movimento vibra e si manifesta attraverso la magica chioma del pennello fluendo il colore che si appoggia sulla tela.<br/>Una tela madre che tutto accoglie come il velo della nostra madre Terra ci accoglie, dandoci senso nel nostro operare.</p>
+        </div>
+        <a href="#contatto" class="btn-terracotta">Partecipa al gioco</a>
+      </div>
+
+      <!-- calligraphy_74.png (800×1057) — tela totale main image -->
+      <div class="tt-img reveal">
+        <img src="Telatotale.png"
+             alt="tela totale — pittura" width="800" height="1057"/>
+        <span class="tt-img-label">Tela Totale</span>
+      </div>
+    </div>
+
+    <!-- Homepage pittura section mini-gallery
+         (calligraphy_70–75 images from the homepage) -->
+    <div class="section-divider reveal">
+      <span class="div-line"></span>
+      <span class="div-title">pittura</span>
+      <span class="div-line"></span>
+    </div>
+
+    <div class="pittura-strip reveal" data-lb="pittura">
+
+      <!-- calligraphy_75.png (600×662) -->
+      <figure class="ps-item ps-tall" data-caption="Pittura">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/calligraphy_75.png"
+             alt="pittura" width="600" height="662" loading="lazy"/>
+        <figcaption>Pittura</figcaption>
+      </figure>
+
+      <!-- calligraphy_70.png (600×490) — foglio -->
+      <figure class="ps-item" data-caption="Foglio">
+        <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_70.png"
+             alt="foglio" width="600" height="490" loading="lazy"/>
+        <figcaption>Foglio</figcaption>
+      </figure>
+
+      <!-- calligraphy_72.png (600×442) — atelier con persone -->
+      <figure class="ps-item" data-caption="Atelier con persone">
+        <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_72.png"
+             alt="atelier con persone" width="600" height="442" loading="lazy"/>
+        <figcaption>Atelier</figcaption>
+      </figure>
+
+      <!-- calligraphy_71.png (600×728) — scultura quadro -->
+      <figure class="ps-item ps-tall" data-caption="Scultura quadro">
+        <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_71.png"
+             alt="scultura quadro" width="600" height="728" loading="lazy"/>
+        <figcaption>Scultura</figcaption>
+      </figure>
+
+      <!-- calligraphy_73.png (600×564) — scatola -->
+      <figure class="ps-item" data-caption="Scatola">
+        <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_73.png"
+             alt="scatola" width="600" height="564" loading="lazy"/>
+        <figcaption>Scatola</figcaption>
+      </figure>
+
+    </div><!-- /pittura-strip -->
+
+    <!-- La Tela Totale full gallery (all 9 images from /tela-totale/) -->
+    <div class="cad-row reveal">
+      <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png"
+           alt="CAD" class="cad-mark"/>
+      <span class="cad-label">La Tela Totale</span>
+    </div>
+
+    <!-- tela-totale-dritta.jpeg (1080×678) — wide full image, NOT lightbox-linked originally -->
+    <div class="tt-dritta reveal">
+      <img src="http://cantondellarte.it/wp-content/uploads/2025/08/tela-totale-dritta.jpeg"
+           alt="tela totale dritta" width="1080" height="678"/>
+    </div>
+
+    <div class="photo-grid reveal" data-lb="tela-totale">
+
+      <!-- IMG_5113.jpg (750×1000) portrait -->
+      <figure class="pg-item pg-tall" data-caption="Tela totale">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_5113.jpg"
+             alt="tela totale" loading="lazy" width="750" height="1000"/>
+      </figure>
+      <!-- IMG_2978.jpg (1000×750) landscape -->
+      <figure class="pg-item pg-wide" data-caption="Tela totale">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_2978.jpg"
+             alt="tela totale" loading="lazy" width="1000" height="750"/>
+      </figure>
+      <!-- telatotale.jpg (1200×726) wide -->
+      <figure class="pg-item pg-full" data-caption="Tela totale — panoramica">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/telatotale.jpg"
+             alt="telatotale" loading="lazy" width="1200" height="726"/>
+      </figure>
+      <!-- IMG_3280.jpg (750×1000) portrait -->
+      <figure class="pg-item pg-tall" data-caption="Tela totale">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_3280.jpg"
+             alt="tela totale" loading="lazy" width="750" height="1000"/>
+      </figure>
+      <!-- IMG_0734.jpeg (1000×667) landscape -->
+      <figure class="pg-item pg-wide" data-caption="Tela totale">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0734.jpeg"
+             alt="tela totale" loading="lazy" width="1000" height="667"/>
+      </figure>
+      <!-- IMG_0607.jpeg (667×1000) portrait -->
+      <figure class="pg-item pg-tall" data-caption="Tela totale">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_0607.jpeg"
+             alt="tela totale" loading="lazy" width="667" height="1000"/>
+      </figure>
+      <!-- IMG_3274.jpg (750×1000) portrait -->
+      <figure class="pg-item pg-tall" data-caption="Tela totale">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_3274.jpg"
+             alt="tela totale" loading="lazy" width="750" height="1000"/>
+      </figure>
+      <!-- IMG_3290.jpg (1333×1000) wide -->
+      <figure class="pg-item pg-full" data-caption="Tela totale — gruppo">
+        <img src="http://cantondellarte.it/wp-content/uploads/2025/07/IMG_3290.jpg"
+             alt="tela totale" loading="lazy" width="1333" height="1000"/>
+      </figure>
+
+    </div><!-- /photo-grid tela-totale -->
+
+    <div class="cad-footer reveal" aria-hidden="true">
+      <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png" alt="cad"/>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     VIMEO CHANNEL SHOWCASE
+     (dedicated video section — all videos)
+══════════════════════════════════════════ -->
+<section class="sec vimeo-sec">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">Video</div>
+    <div class="cad-row reveal">
+      <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png"
+           alt="CAD" class="cad-mark"/>
+      <span class="cad-label">Canale Vimeo</span>
+    </div>
+    <h2 class="sec-title reveal">Video dal canale<br/><em>Vimeo</em></h2>
+    <p class="vimeo-intro reveal">Sessioni di pittura, workshop creativi, tecniche decorative e molto altro. Visita il canale completo per tutti i video dell'atelier.</p>
+
+    <div class="vimeo-duo reveal">
+      <div class="vimeo-box">
+        <iframe
+          src="https://player.vimeo.com/video/1094779800?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          title="Canton dell'Arte — Vimeo"
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="vimeo-card">
+        <div class="vc-icon">&#9654;</div>
+        <h3>Canale Vimeo<br/>Canton dell'Arte</h3>
+        <p>Tutti i video di Stefano Nicoletti: sessioni di pittura, workshop, tecniche decorative, Tela Totale e molto altro ancora.</p>
+        <a href="https://vimeo.com/cantondellarte" target="_blank" rel="noopener" class="btn-terracotta">Visita il canale ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CONTATTO
+     Source: footer/contact block on every page
+     Contains: CAD, "canton dell'arte" heading, email, phone,
+     Instagram/YouTube/Vimeo links, brushes image, contact form
+══════════════════════════════════════════ -->
+<section id="contatto" class="sec contatto-sec">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">06 — Contatto</div>
+
+    <div class="contatto-grid">
+
+      <!-- Info column -->
+      <div class="contatto-info reveal">
+        <div class="cad-row">
+          <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_61.png"
+               alt="CAD" class="cad-mark"/>
+          <span class="cad-label">canton dell'arte</span>
+        </div>
+        <h2 class="sec-title">Mettiamoci<br/>in contatto</h2>
+        <p class="ci-role">stefano nicoletti atelier</p>
+
+        <div class="ci-links">
+          <a href="mailto:cantondellarte@gmail.com" class="ci-link">
+            <span class="ci-ico">&#9993;</span>
             cantondellarte@gmail.com
           </a>
-          <a href="tel:+393407994909" class="contact-line">
-            <span class="contact-icon">✆</span>
+          <a href="tel:+393407994909" class="ci-link">
+            <span class="ci-ico">&#9990;</span>
             +39 340 7994909
           </a>
         </div>
-        <div class="social-row reveal-up">
-          <a href="https://www.instagram.com/canton_dell_arte" target="_blank" class="social-link">Instagram</a>
-          <span>·</span>
-          <a href="https://www.youtube.com/@Cantondellarte" target="_blank" class="social-link">YouTube</a>
-          <span>·</span>
-          <a href="https://vimeo.com/cantondellarte" target="_blank" class="social-link">Vimeo</a>
+
+        <!-- Social follow links — exactly as original footer: "Segui su Instagram/Youtube/Vimeo" -->
+        <ul class="ci-socials">
+          <li>
+            <a href="https://www.instagram.com/canton_dell_arte?igsh=MTM0aDlncXc1eXI5MA==" target="_blank" rel="noopener" class="ci-soc-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg>
+              Segui su Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@Cantondellarte" target="_blank" rel="noopener" class="ci-soc-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+              Segui su Youtube
+            </a>
+          </li>
+          <li>
+            <a href="https://vimeo.com/cantondellarte" target="_blank" rel="noopener" class="ci-soc-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 7.42c-.09 2.04-1.52 4.83-4.28 8.37C14.93 19.5 12.5 21.27 10.5 21.27c-1.27 0-2.34-1.17-3.22-3.52l-1.76-6.46C4.78 8.94 4.06 7.77 3.27 7.77c-.18 0-.8.37-1.87 1.12L.5 7.64c1.18-1.04 2.35-2.08 3.5-3.12C5.63 3.04 7.07 2.44 8.12 2.34c2.64-.25 4.27 1.55 4.87 5.4.66 4.16 1.12 6.74 1.38 7.75.77 3.48 1.61 5.22 2.53 5.22.72 0 1.8-.98 3.24-2.93 1.44-1.95 2.2-3.44 2.29-4.45.2-1.69-.49-2.53-2.08-2.53-.74 0-1.5.17-2.29.52 1.52-4.98 4.43-7.4 8.72-7.28"/></svg>
+              Segui su Vimeo
+            </a>
+          </li>
+        </ul>
+
+        <!-- Brushes decorative image (calligraphy_brushes_17.png, 1440×198) -->
+        <div class="brushes-img">
+          <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_brushes_17.png"
+               alt="pennelli decorativi" loading="lazy" width="1440" height="198"/>
         </div>
       </div>
-      <form class="contact-form reveal-right" id="contactForm">
-        <div class="form-group">
-          <label for="name">Nome</label>
-          <input type="text" id="name" name="name" placeholder="Il tuo nome" required />
+
+      <!-- Contact form -->
+      <form class="contatto-form reveal" id="contactForm" novalidate>
+        <h3 class="form-title">Scrivimi</h3>
+
+        <div class="f-field">
+          <label for="fn">Nome</label>
+          <input type="text" id="fn" name="nome" placeholder="Il tuo nome" autocomplete="name" required/>
+          <span class="f-err" id="fnErr"></span>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="La tua email" required />
+        <div class="f-field">
+          <label for="fe">Email</label>
+          <input type="email" id="fe" name="email" placeholder="La tua email" autocomplete="email" required/>
+          <span class="f-err" id="feErr"></span>
         </div>
-        <div class="form-group">
-          <label for="message">Messaggio</label>
-          <textarea id="message" name="message" rows="5" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+        <div class="f-field">
+          <label for="fs">Argomento</label>
+          <select id="fs" name="argomento">
+            <option value="">Seleziona…</option>
+            <option>Partecipare a Tela Totale</option>
+            <option>Commissione opera d'arte</option>
+            <option>Progetto decorativo</option>
+            <option>Workshop</option>
+            <option>Informazioni generali</option>
+            <option>Altro</option>
+          </select>
         </div>
-        <button type="submit" class="btn-primary">Invia Messaggio</button>
-        <div class="form-feedback" id="formFeedback"></div>
+        <div class="f-field">
+          <label for="fm">Messaggio</label>
+          <textarea id="fm" name="messaggio" rows="6"
+            placeholder="Scrivi qui il tuo messaggio…" required></textarea>
+          <span class="f-err" id="fmErr"></span>
+        </div>
+        <button type="submit" class="btn-terracotta btn-submit" id="fBtn">
+          <span class="btn-txt">Invia Messaggio</span>
+          <span class="btn-wait" aria-hidden="true">Invio in corso…</span>
+        </button>
+        <div class="f-response" id="fResponse" role="alert" aria-live="polite"></div>
       </form>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-logo">
-        <span class="logo-main">Canton</span>
-        <span class="logo-sub">dell'Arte</span>
-      </div>
-      <p class="footer-copy">© Stefano Nicoletti — Canton dell'Arte. Tutti i diritti riservati.</p>
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#atelier">Atelier</a>
-        <a href="#arte">Arte</a>
-        <a href="#contatto">Contatto</a>
-      </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="stefano.js"></script>
+<!-- ══════════════════════════════════════════
+     FOOTER
+     Mirrors original footer: logo, brushes, copyright
+══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <!-- Logo image (scritta-canton-arte-orizzontale.png) -->
+    <a href="#home" class="footer-logo">
+      <img src="http://cantondellarte.it/wp-content/uploads/2025/07/scritta-canton-arte-orizzontale.png"
+           alt="Canton dell'Arte"
+           onerror="this.style.display='none';this.parentNode.insertAdjacentHTML('beforeend','<span class=footer-logo-txt>Canton dell\'Arte</span>')"/>
+    </a>
+
+    <nav class="footer-nav">
+      <a href="#home">Home</a>
+      <a href="#atelier">Atelier</a>
+      <a href="#chi-sono">Chi Sono</a>
+      <a href="#arte">Arte</a>
+      <a href="#decoro">Decoro</a>
+      <a href="#tela-totale">Tela Totale</a>
+      <a href="#contatto">Contatto</a>
+    </nav>
+
+    <div class="footer-social">
+      <a href="https://www.instagram.com/canton_dell_arte" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.youtube.com/@Cantondellarte" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://vimeo.com/cantondellarte" target="_blank" rel="noopener">Vimeo</a>
+    </div>
+  </div>
+
+  <!-- Brushes image decorating the footer bottom (exactly as original) -->
+  <div class="footer-brushes">
+    <img src="http://cantondellarte.it/wp-content/uploads/2024/11/calligraphy_brushes_17.png"
+         alt="" loading="lazy" width="1440" height="198"/>
+  </div>
+
+  <div class="footer-copy">
+    <p>&copy;StefanoNicoletti Canton dell'Arte</p>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="btt" id="btt" aria-label="Torna in cima">&#8593;</button>
+
+<!-- ══════════════════════════════════════════
+     LIGHTBOX
+══════════════════════════════════════════ -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Visualizza immagine">
+  <div class="lb-bg" id="lbBg"></div>
+  <button class="lb-x" id="lbX" aria-label="Chiudi">&times;</button>
+  <button class="lb-prev" id="lbPrev" aria-label="Precedente">&#8249;</button>
+  <button class="lb-next" id="lbNext" aria-label="Successiva">&#8250;</button>
+  <div class="lb-stage">
+    <img id="lbImg" src="" alt=""/>
+    <p class="lb-cap" id="lbCap"></p>
+  </div>
+</div>
+
+<script src="stefano.js"></script>
 </body>
 </html>
